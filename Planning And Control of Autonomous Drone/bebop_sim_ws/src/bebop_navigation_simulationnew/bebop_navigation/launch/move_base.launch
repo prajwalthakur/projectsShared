@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- TODO Create a argument by the name of base_global_planner and its default value as navfn/NavfnROS --> <!-- global planner-->
+  <!-- TODO Create a argument by the name of base_local_planner and its default value as dwa_local_planner/DWAPlannerROS --> <!-- local planner-->
+  <arg name="base_local_planner" default="dwa_local_planner/DWAPlannerROS"/> 
+  <arg name="base_global_planner" default="navfn/NavfnROS"/>   
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+
+    <param name="base_global_planner" value="$(arg base_global_planner)"/>
+    <param name="base_local_planner" value="$(arg base_local_planner)"/>  
+
+    <!-- TODO load the planner.yaml file  located in this package-->
+    <rosparam file="$(find bebop_navigation)/config/planner.yaml" command="load"/>
+    <!-- TODO Question  what does the command load does?-->
+    <!-- observation sources located in costmap_common.yaml -->
+    <!-- following two lines load the parameters in costmap_common.yaml for local and global costmap -->
+    <rosparam file="$(find bebop_navigation)/config/costmap_common.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find bebop_navigation)/config/costmap_common.yaml" command="load" ns="local_costmap" />
+    <!-- TODO Question  what does ns represent , what's the use of ns parameter?-->
+    <!-- local costmap, needs size -->
+    <rosparam file="$(find bebop_navigation)/config/costmap_local.yaml" command="load" ns="local_costmap" />
+    <param name="local_costmap/width" value="10.0"/>
+    <param name="local_costmap/height" value="10.0"/>
+
+    
+    <!-- global costmap with laser, for odom_navigation_demo -->
+    <rosparam file="$(find bebop_navigation)/config/costmap_global_laser.yaml" command="load" ns="global_costmap" />
+    <param name="global_costmap/width" value="100.0" />
+    <param name="global_costmap/height" value="100.0" />
+  </node>
+
+</launch>

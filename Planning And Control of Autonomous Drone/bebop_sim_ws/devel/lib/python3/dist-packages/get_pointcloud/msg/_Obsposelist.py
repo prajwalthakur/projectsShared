@@ -1,0 +1,1 @@
+/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/get_pointcloud/lib/python3/dist-packages/get_pointcloud/msg/_Obsposelist.py

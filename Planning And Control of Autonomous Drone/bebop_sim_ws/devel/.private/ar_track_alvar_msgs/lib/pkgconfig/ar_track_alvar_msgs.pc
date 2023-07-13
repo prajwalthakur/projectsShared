@@ -1,0 +1,8 @@
+prefix=/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/ar_track_alvar_msgs
+
+Name: ar_track_alvar_msgs
+Description: Description of ar_track_alvar_msgs
+Version: 0.7.1
+Cflags: -I/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/ar_track_alvar_msgs/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs message_runtime std_msgs

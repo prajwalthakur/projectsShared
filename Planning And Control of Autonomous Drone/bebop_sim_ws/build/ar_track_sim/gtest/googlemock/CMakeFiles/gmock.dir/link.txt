@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgmock.so -o ../lib/libgmock.so CMakeFiles/gmock.dir/src/gmock-all.cc.o  -Wl,-rpath,/home/prajwal20/ims/droneCourse/bebop_sim_ws/build/ar_track_sim/gtest/lib ../lib/libgtest.so -lpthread 

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <!--- Run Move Base -->  
+  <include file="$(find bebop_navigation)/launch/move_base.launch">
+  </include>
+  
+</launch>

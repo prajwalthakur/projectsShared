@@ -1,0 +1,1 @@
+/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/hector_quadrotor_controllers/share/hector_quadrotor_controllers/cmake/hector_quadrotor_controllersConfig.cmake

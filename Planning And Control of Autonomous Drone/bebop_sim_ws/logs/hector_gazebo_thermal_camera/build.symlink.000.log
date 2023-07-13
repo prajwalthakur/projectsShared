@@ -1,0 +1,5 @@
+Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/share/hector_gazebo_thermal_camera/cmake/hector_gazebo_thermal_cameraConfig-version.cmake
+Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/share/hector_gazebo_thermal_camera/cmake/hector_gazebo_thermal_cameraConfig.cmake
+Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/lib/libgazebo_ros_thermal_depth_camera.so
+Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/lib/libgazebo_ros_thermal_camera.so
+Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/lib/pkgconfig/hector_gazebo_thermal_camera.pc

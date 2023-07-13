@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="get_pointcloud" type="get_pose_from_gazebo.py" name="gazebo_tf_broadcaster" output="screen">
+  </node>
+  
+</launch>

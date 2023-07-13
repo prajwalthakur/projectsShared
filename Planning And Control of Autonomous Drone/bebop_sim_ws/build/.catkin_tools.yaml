@@ -1,0 +1,6 @@
+devel_space: /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel
+install: false
+install_space: /home/prajwal20/ims/droneCourse/bebop_sim_ws/install
+profile: default
+source_space: /home/prajwal20/ims/droneCourse/bebop_sim_ws/src
+workspace: /home/prajwal20/ims/droneCourse/bebop_sim_ws

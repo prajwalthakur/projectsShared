@@ -1,0 +1,8 @@
+prefix=/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/hector_quadrotor_controller_gazebo
+
+Name: hector_quadrotor_controller_gazebo
+Description: Description of hector_quadrotor_controller_gazebo
+Version: 0.3.5
+Cflags: -I/home/prajwal20/ims/droneCourse/bebop_sim_ws/src/bebop_navigation_simulationnew/hector_neotic/hector_quadrotor_controller_gazebo/include
+Libs: -L${prefix}/lib -lhector_quadrotor_controller_gazebo
+Requires: gazebo_ros_control hector_quadrotor_interface

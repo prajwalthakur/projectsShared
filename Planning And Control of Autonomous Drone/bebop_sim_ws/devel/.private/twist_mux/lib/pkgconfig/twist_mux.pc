@@ -1,0 +1,8 @@
+prefix=/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/twist_mux
+
+Name: twist_mux
+Description: Description of twist_mux
+Version: 3.1.2
+Cflags: -I/home/prajwal20/ims/droneCourse/bebop_sim_ws/src/bebop_navigation_simulationnew/hector_neotic/twist_mux-melodic-devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs geometry_msgs visualization_msgs diagnostic_updater

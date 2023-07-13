@@ -1,0 +1,10 @@
+[35m[1mScanning dependencies of target twist_mux[0m
+[35m[1mScanning dependencies of target twist_marker[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/twist_marker.dir/src/twist_marker.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/twist_mux.dir/src/twist_mux_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/twist_mux.dir/src/twist_mux.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/twist_mux.dir/src/twist_mux_diagnostics.cpp.o[0m
+[ 83%] [32m[1mLinking CXX executable /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/twist_mux/lib/twist_mux/twist_marker[0m
+[ 83%] Built target twist_marker
+[100%] [32m[1mLinking CXX executable /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/twist_mux/lib/twist_mux/twist_mux[0m
+[100%] Built target twist_mux

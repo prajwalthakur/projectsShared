@@ -1,0 +1,8 @@
+prefix=/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/bebop_navigation
+
+Name: bebop_navigation
+Description: Description of bebop_navigation
+Version: 0.6.4
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

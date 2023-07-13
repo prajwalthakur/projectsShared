@@ -1,0 +1,5 @@
+bebop_navigation_simulationnew/motion_capture_simulator/motion_capture_simulator-master/mocap_simulator
+/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/mocap_simulator/cmake.lock /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/./cmake.lock
+/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/mocap_simulator/share/mocap_simulator/cmake/mocap_simulatorConfig.cmake /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/share/mocap_simulator/cmake/mocap_simulatorConfig.cmake
+/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/mocap_simulator/share/mocap_simulator/cmake/mocap_simulatorConfig-version.cmake /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/share/mocap_simulator/cmake/mocap_simulatorConfig-version.cmake
+/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/mocap_simulator/lib/pkgconfig/mocap_simulator.pc /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/lib/pkgconfig/mocap_simulator.pc

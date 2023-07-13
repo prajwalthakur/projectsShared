@@ -1,0 +1,8 @@
+prefix=/home/prajwal20/ims/droneCourse/bebop_sim_ws/install
+
+Name: ar_track_sim
+Description: Description of ar_track_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

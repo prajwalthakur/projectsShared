@@ -1,0 +1,1 @@
+/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/hector_quadrotor_actions/lib/pkgconfig/hector_quadrotor_actions.pc
