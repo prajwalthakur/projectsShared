@@ -1,1 +1,0 @@
-/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/hector_uav_msgs/share/roseus/ros/hector_uav_msgs/msg/YawrateCommand.l

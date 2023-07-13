@@ -1,8 +1,0 @@
-prefix=/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/hector_quadrotor_interface
-
-Name: hector_quadrotor_interface
-Description: Description of hector_quadrotor_interface
-Version: 0.3.5
-Cflags: -I/home/prajwal20/ims/droneCourse/bebop_sim_ws/src/bebop_navigation_simulationnew/hector_neotic/hector_quadrotor_interface/include
-Libs: -L${prefix}/lib -lhector_quadrotor_interface
-Requires: roscpp geometry_msgs sensor_msgs nav_msgs hector_uav_msgs std_srvs hardware_interface controller_interface

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="get_pointcloud" type="point_clound_circular_.py" name="pcl2_obs_pub_example" output="screen">
+  </node>
+  
+</launch>

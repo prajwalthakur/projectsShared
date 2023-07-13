@@ -1,1 +1,0 @@
-/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/ar_track_alvar_msgs/lib/python3/dist-packages/ar_track_alvar_msgs/msg/_AlvarMarker.py

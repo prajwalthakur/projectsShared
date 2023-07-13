@@ -1,1 +1,0 @@
-/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/hector_uav_msgs/share/hector_uav_msgs/msg/PoseFeedback.msg

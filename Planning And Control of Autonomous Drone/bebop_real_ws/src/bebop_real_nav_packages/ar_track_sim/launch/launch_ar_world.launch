@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch> 
+  <!-- <include file="$(find get_pointcloud)/launch/launch_real_world.launch">
+  </include> -->
+  <include file ="$(find ar_track_sim)/launch/ar_track.launch"/>
+   <node pkg="tf" type="static_transform_publisher" name="world_to_bebop_odom" args="-0.026 -0.243 -0.055 -0.291 -0.100 -0.770  0.558 world odom 100" />
+
+      <!-- <include file="$(find bebop_gazebo)/launch/bebop_moving_helipad.launch" /> -->
+</launch>
+
+

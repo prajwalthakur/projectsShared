@@ -1,1 +1,0 @@
-/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/hector_gazebo_plugins/share/gennodejs/ros/hector_gazebo_plugins/srv/SetBias.js

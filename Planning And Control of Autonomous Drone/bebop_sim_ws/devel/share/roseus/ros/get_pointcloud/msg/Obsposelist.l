@@ -1,1 +1,0 @@
-/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/get_pointcloud/share/roseus/ros/get_pointcloud/msg/Obsposelist.l

@@ -1,8 +1,0 @@
-prefix=/home/prajwal20/ims/droneCourse/bebop_sim_ws/install
-
-Name: bebop_gazebo
-Description: Description of bebop_gazebo
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp

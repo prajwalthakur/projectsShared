@@ -1,8 +1,0 @@
-prefix=/home/prajwal20/ims/droneCourse/bebop_sim_ws/install
-
-Name: mocap_simulator
-Description: Description of mocap_simulator
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

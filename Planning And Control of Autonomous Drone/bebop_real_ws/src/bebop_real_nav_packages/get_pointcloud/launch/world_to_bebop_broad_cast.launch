@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="get_pointcloud" type="world_bebop_broadcast.py" name="world_bebop_tf_broadcast" output="screen">
+  </node> 
+</launch>

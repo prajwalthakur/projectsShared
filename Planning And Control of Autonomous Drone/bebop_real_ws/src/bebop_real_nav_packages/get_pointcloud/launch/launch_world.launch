@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <env name="GAZEBO_MODEL_PATH" value="$(find bebop_gazebo)/meshes/bebop_2/:$GAZEBO_MODEL_PATH" />
+  <arg name="world" default="gazebo_ros_range"/>
+  <arg name="bebop_x" default="-6.66908"/>
+  <arg name="bebop_y" default="6.44567"/>
+  <arg name="bebop_z" default="0.5"/>
+  <arg name="bebop_Y" default="0.0"/>
+  
+  <include file="$(find bebop_gazebo)/launch/spawn_bebop.launch">
+    <arg name="x" value="$(arg bebop_x)"/>
+    <arg name="y" value="$(arg bebop_y)"/>
+    <arg name="z" value="$(arg bebop_z)"/>
+    <arg name="Y" value="$(arg bebop_Y)"/>
+  </include>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find get_pointcloud)/models/small_arena_gazebo.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <!-- to get position from gazebo -->
+  <include file="$(find get_pointcloud)/launch/get_pose_from_gazebo.launch"/>
+  <!-- to make circular point cloud from center position of obstacle --> 
+  <include file="$(find get_pointcloud)/launch/get_pointcloud_example.launch"/>  
+  <!-- to make laser data scan from point cloud --> 
+  <include file="$(find get_pointcloud)/launch/point_cloud_to_laser.launch"/> 
+  <!-- static transform between world to odom of drone -->
+  <node pkg="tf" type="static_transform_publisher" name="world_to_bebop_odom" args="0 0 0 0 0 0 world odom 100" />
+
+  <!-- map less navigation -->
+  <include file="$(find bebop_navigation)/launch/map_less_navigation.launch"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find bebop_navigation)/config/robot.rviz"/>
+  <!-- <include file="$(find get_point_cloud)/launch/bebop_takeoff.launch"> -->
+</launch>
+
+

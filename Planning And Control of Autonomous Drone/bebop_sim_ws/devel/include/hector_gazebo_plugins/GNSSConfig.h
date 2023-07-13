@@ -1,1 +1,0 @@
-/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/hector_gazebo_plugins/include/hector_gazebo_plugins/GNSSConfig.h

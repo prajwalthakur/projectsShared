@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/prajwal20/ims/droneCourse/bebop_real_ws/src/bebop_real_nav_packages/ar_track_alvar/ar_track_alvar/include/**",
+        "/home/prajwal20/ims/droneCourse/bebop_real_ws/src/bebop_real_nav_packages/bebop_autonomy/bebop_driver/include/**",
+        "/home/prajwal20/ims/droneCourse/bebop_real_ws/src/bebop_real_nav_packages/bebop_vel_ctrl/include/**",
+        "/home/prajwal20/ims/droneCourse/bebop_real_ws/src/bebop_real_nav_packages/image_pipeline-noetic/depth_image_proc/include/**",
+        "/home/prajwal20/ims/droneCourse/bebop_real_ws/src/bebop_real_nav_packages/image_pipeline-noetic/image_proc/include/**",
+        "/home/prajwal20/ims/droneCourse/bebop_real_ws/src/bebop_real_nav_packages/pointcloud_to_laserscan/include/**",
+        "/home/prajwal20/ims/droneCourse/bebop_real_ws/src/bebop_real_nav_packages/image_pipeline-noetic/stereo_image_proc/include/**",
+        "/home/prajwal20/ims/droneCourse/bebop_real_ws/src/bebop_real_nav_packages/usb_cam-develop/include/**",
+        "/home/prajwal20/ims/droneCourse/bebop_real_ws/src/bebop_real_nav_packages/vrpn_client_ros-kinetic-devel/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

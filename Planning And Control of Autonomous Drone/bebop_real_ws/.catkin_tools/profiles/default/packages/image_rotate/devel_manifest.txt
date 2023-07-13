@@ -1,0 +1,14 @@
+bebop_real_nav_packages/image_pipeline-noetic/image_rotate
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/cmake.lock /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/./cmake.lock
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/share/image_rotate/docs/ImageRotateConfig.wikidoc /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/share/image_rotate/docs/ImageRotateConfig.wikidoc
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/share/image_rotate/docs/ImageRotateConfig.dox /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/share/image_rotate/docs/ImageRotateConfig.dox
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/share/image_rotate/docs/ImageRotateConfig-usage.dox /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/share/image_rotate/docs/ImageRotateConfig-usage.dox
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/share/image_rotate/cmake/image_rotateConfig-version.cmake /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/share/image_rotate/cmake/image_rotateConfig-version.cmake
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/share/image_rotate/cmake/image_rotateConfig.cmake /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/share/image_rotate/cmake/image_rotateConfig.cmake
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/include/image_rotate/ImageRotateConfig.h /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/include/image_rotate/ImageRotateConfig.h
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/lib/libimage_rotate.so /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/lib/libimage_rotate.so
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/lib/image_rotate/image_rotate /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/lib/image_rotate/image_rotate
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/lib/pkgconfig/image_rotate.pc /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/lib/pkgconfig/image_rotate.pc
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/lib/python3/dist-packages/image_rotate/__init__.py /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/lib/python3/dist-packages/image_rotate/__init__.py
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/lib/python3/dist-packages/image_rotate/cfg/ImageRotateConfig.py /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/lib/python3/dist-packages/image_rotate/cfg/ImageRotateConfig.py
+/home/prajwal20/ims/droneCourse/bebop_real_ws/devel/.private/image_rotate/lib/python3/dist-packages/image_rotate/cfg/__init__.py /home/prajwal20/ims/droneCourse/bebop_real_ws/devel/lib/python3/dist-packages/image_rotate/cfg/__init__.py

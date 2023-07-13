@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="get_pointcloud" type="get_mult_obs_poses_optitrack.py" name="obs_optitrack_pose_broadcaster" output="screen">
+  </node>
+  
+</launch>

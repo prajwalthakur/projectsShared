@@ -1,6 +1,0 @@
-Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/share/hector_quadrotor_actions/cmake/hector_quadrotor_actionsConfig.cmake
-Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/share/hector_quadrotor_actions/cmake/hector_quadrotor_actionsConfig-version.cmake
-Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/lib/pkgconfig/hector_quadrotor_actions.pc
-Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/lib/hector_quadrotor_actions/pose_action
-Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/lib/hector_quadrotor_actions/takeoff_action
-Symlinking /home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/lib/hector_quadrotor_actions/landing_action

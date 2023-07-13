@@ -1,0 +1,33 @@
+
+
+#put it in bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ims/prajwal_thakur/parrot_beboop/parrot_bebop_real_ws/devel/lib/parrot_arsdk
+#install 
+sudo apt-get install ros-noetic-vrpn-client-ros
+#to get the poses of object from optitrack
+roslaunch vrpn_client_ros sample.launch server:=192.168.1.134
+
+# to publish the velocity command to drone
+rostopic pub /bebop/velocity geometry_msgs/Twist 
+
+
+# get rqt_frame
+rosrun rqt_tf_tree rqt_tf_tree
+
+# takeoff
+rostopic pub /bebop/takeoff std_msgs/Empty "{}" 
+
+
+# bebop driver conroller
+roslaunch bebop_driver bebop_with_vel_controller.launch 
+
+
+#landing 
+rostopic pub /bebop/land std_msgs/Empty "{}"
+
+
+#tf_Tree
+
+rosrun tf tf_echo Bebop base_footprint
+
+

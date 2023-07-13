@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="tf" type="static_transform_publisher" name="world_to_bebop_odom" args="0 0 0 0 0 0 world odom 100" />
+  
+  <!-- map less navigation -->
+  <include file="$(find get_pointcloud)/launch/ar_tracking.launch"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find bebop_navigation)/config/robot.rviz"/>
+  <!-- <include file="$(find get_point_cloud)/launch/bebop_takeoff.launch"> -->
+</launch>
+
+
+1

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+
+
+  <!-- to get position from gazebo -->
+  <!-- <include file="$(find get_pointcloud)/launch/get_pose_from_gazebo.launch"/> -->
+  <!-- to make circular point cloud from center position of obstacle -->
+  
+  
+  
+   <include file="$(find get_pointcloud)/launch/get_position_drone_from_optitrack.launch"/>
+
+  <!--<include file="$(find get_pointcloud)/launch/get_position_obs_from_optitrack.launch"/>
+  <include file="$(find get_pointcloud)/launch/obs_ceneter_to_point_cloud.launch"/>   -->
+  <!-- to make laser data scan from point cloud --> 
+  <!-- <include file="$(find get_pointcloud)/launch/point_cloud_to_laser.launch"/>  -->
+  <!-- static transform between world to odom of drone -->
+  <node pkg="tf" type="static_transform_publisher" name="world_to_odom" args="0 0 0 0 0 0 world odom 100" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="world_to_bebop" args="3.026 .243 1.055 0.0 0.0 0.0 odom Bebop 100" /> -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="bebop_to_camera" args="0.1 0.0 0.0 0.0 0.0 0.0 Bebop camera_optical 100" /> -->
+
+  <!-- <node pkg="tf" type="static_transform_publisher" name="bebop_to_base" args="0 0 0 0 0 0 Bebop base_footprint 100" /> -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="bebop_to_base_link" args="0 0 0 0 0 0 base_footprint base_link 100" /> -->
+
+  <!-- map less navigation -->
+  <!-- <include file="$(find bebop_navigation)/launch/map_less_navigation.launch"/>-->
+  <include file="$(find get_pointcloud)/launch/ar_tracking.launch"/> 
+  <node pkg="get_pointcloud" type="camera_tf_broadcaster.py" name="camera_tf_broadcaster" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find bebop_navigation)/config/robot.rviz"/>
+  <!-- <include file="$(find get_point_cloud)/launch/bebop_takeoff.launch"> -->
+</launch>
+
+

@@ -1,1 +1,0 @@
-/home/prajwal20/ims/droneCourse/bebop_sim_ws/devel/.private/mocap_simulator/share/mocap_simulator/cmake/mocap_simulatorConfig.cmake
