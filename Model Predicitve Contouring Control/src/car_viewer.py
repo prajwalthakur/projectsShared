@@ -33,8 +33,8 @@ class mav_viewer():
         self.car = car
         self.track = track
         self.points = self.car.get_car_vertices()
-        self._addTrack()
-        self.update(scale_Car=scale)
+        #self._addTrack()
+        self.update(openLoopPrediction=np.random.rand(10,3),scale_Car=scale)
         #pdb.set_trace()
 
     ###################################
@@ -61,7 +61,7 @@ class mav_viewer():
             self.window.addItem(w_gl_item)
     
     # public functions
-    def update(self,scale_Car=5):
+    def update(self,openLoopPrediction,scale_Car=5):
         
         # convert points to triangular mesh defined as array of three 3D points (Nx3x3)
         car_points = self.car.get_car_vertices()
@@ -79,6 +79,11 @@ class mav_viewer():
                                       computeNormals=False)  # speeds up rendering
             self.window.addItem(self.body)  # add body to plot
             self.plot_initialized = True
+            openLoopPrediction = np.hstack((openLoopPrediction,np.zeros((openLoopPrediction.shape[0],1))))
+            self.body2 = gl.GLScatterPlotItem(pos=openLoopPrediction, color=(1,0,0,1), 
+                                    size=100)
+            self.window.addItem(self.body2)
+            
         # vertices2 = np.array([[0, 0, 0],[0, 1, 0],[1, 1, 0]])  # Replace with your array
 
         # # initialize drawing of triangular mesh.
@@ -95,7 +100,12 @@ class mav_viewer():
         else:
             # reset mesh using rotated and translated points
             self.body.setMeshData(vertexes=scale_Car*mesh, vertexColors=meshColors)
-
+            #self.window.removeItem(self.body2)
+            openLoopPrediction = np.hstack((openLoopPrediction,np.zeros((openLoopPrediction.shape[0],1))))
+            self.body2 = gl.GLScatterPlotItem(pos=openLoopPrediction, color=(1,0,0,1), 
+                        size=100)
+            self.window.addItem(self.body2)
+        #pdb.set_trace()
         # update the center of the camera view to the spacecraft location
         #view_location = Vector(self.car.temporalState.x,self.car.temporalState.y,0)  # defined in ENU coordinates
         #self.window.opts['center'] = view_location
