@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/prajwal18/PycharmProjects/IIIT_delhi/RLMpcownidea/rlHelper/DDPG/tmp/ddpg/TargetCritic_ddpg.ckpt"
+all_model_checkpoint_paths: "/home/prajwal18/PycharmProjects/IIIT_delhi/RLMpcownidea/rlHelper/DDPG/tmp/ddpg/TargetCritic_ddpg.ckpt"
