@@ -1,0 +1,25 @@
+obstacle_range: 3.0
+raytrace_range: 3.5
+
+footprint: [[-0.105, -0.105], [-0.105, 0.105], [0.041, 0.105], [0.041, -0.105]]
+#robot_radius: 0.105
+
+obstacle_range: 5.5
+raytrace_range: 6.0
+
+min_obstacle_height: 0
+
+max_obstacle_height: 5
+#layer definitions
+
+#layer definitions
+
+
+obstacles_laser:
+    enabled: true
+    observation_sources: laser
+    laser: {data_type: LaserScan, clearing: true, marking: true, topic: /scan, inf_is_valid: true}
+
+inflation:
+    enabled: true
+    inflation_radius: 1.0
