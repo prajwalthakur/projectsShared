@@ -6,6 +6,8 @@ def get_coordinates(waypoints):
     xy_center = waypoints[0:,2:4]
     xy_outer = waypoints[0:,4:6]
     return xy_inner,xy_center,xy_outer
+
+
 def border_adjustment(track_original,ModelParams,safetyScaling):
     #shrink track on both sides with WidthCar 
     WidthCar = 0.5*ModelParams["W"]*safetyScaling
