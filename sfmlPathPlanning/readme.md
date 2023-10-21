@@ -11,7 +11,7 @@
 <div align='center'>
 
 ![BFS-animation](fig/sfmlBFS.gif)  
-*▲ BFS PAth Planning ; green:start position white:goal Position ;red:obstacles;blue:The path created by BFS;Orange:Visited cell*
+*▲ BFS Path Planning ; green:start position white:goal Position ;red:obstacles;blue:The path created by BFS;Orange:Visited cell*
 
 </div>
 
