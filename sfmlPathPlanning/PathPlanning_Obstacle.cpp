@@ -2,12 +2,11 @@
 #include <iostream>
 #include <queue>
 #include <stack>
-#include <cstdlib> 
-
-
+#include <cstdlib>
 
 #define START_WEIGHT 2
 #define END_WEIGHT -2
+#define BLOCK 1
 
 sf::Vector2u WINDOW_SIZE{900, 900};
 constexpr unsigned TPS = 60; // ticks per seconds
@@ -22,19 +21,17 @@ struct Tile
 void showq(std ::queue<std::pair<int, int>> gq)
 {
 
-    std ::queue<std::pair<int, int>> g = gq;
-    while (!g.empty()) {
-        std::pair<int,int> t = g.front();
-        std::cout << '\t' <<"x-coord="<< t.first<<"second-cord="<<t.second;
-        std::cout<<std::endl;
-        g.pop();
-    }
-//     gq=q;
-    std::cout << '\n';
+        std ::queue<std::pair<int, int>> g = gq;
+        while (!g.empty())
+        {
+                std::pair<int, int> t = g.front();
+                std::cout << '\t' << "x-coord=" << t.first << "second-cord=" << t.second;
+                std::cout << std::endl;
+                g.pop();
+        }
+        //     gq=q;
+        std::cout << '\n';
 }
-
-
-
 
 #define DOUBLEARRAY
 
@@ -53,27 +50,23 @@ void MouseLeftButtonPressed(sf::Vector2i &mousePos, sf::Vector2f &mouseWorldPos,
         }
 }
 
-
 void FillVisited(sf::Vector2i &mousePos, std::vector<std::vector<Tile>> &doubleTileMap, sf::Color color)
 {
 
-                // std ::cout << "In fillVisited" << std ::endl;
-                auto position = mousePos;
-                // position.x /= TILE_SIZE.x;
-                // position.y /= TILE_SIZE.y;
-                doubleTileMap[position.y][position.x].shape.setFillColor(color);
-                // for(int i=1;i<1e6;i++){
-                //         std::cout<<i;
-                // }
-                
-        
+        // std ::cout << "In fillVisited" << std ::endl;
+        auto position = mousePos;
+        // position.x /= TILE_SIZE.x;
+        // position.y /= TILE_SIZE.y;
+        doubleTileMap[position.y][position.x].shape.setFillColor(color);
+        // for(int i=1;i<1e6;i++){
+        //         std::cout<<i;
+        // }
 }
-
-
 
 void bfs(std::vector<std::vector<Tile>> &doubleTileMap, std ::queue<std ::pair<int, int>> &returnvisit,
          std::vector<std ::vector<std ::pair<int, int>>> &parent)
-{       std::cout<<"BFS starting:";
+{
+        std::cout << "BFS starting:";
         using namespace std;
         pair<int, int> start, end;
         for (int i = 0; i < doubleTileMap.size(); i++)
@@ -81,12 +74,12 @@ void bfs(std::vector<std::vector<Tile>> &doubleTileMap, std ::queue<std ::pair<i
                 for (int j = 0; j < doubleTileMap[0].size(); j++)
                 {
                         if (doubleTileMap[i][j].value == START_WEIGHT)
-                                start = {j,i};
+                                start = {j, i};
 
                         if (doubleTileMap[i][j].value == END_WEIGHT)
-                                end = {j,i};
+                                end = {j, i};
                 }
-        } 
+        }
 
         queue<pair<int, int>> pq;
 
@@ -111,18 +104,17 @@ void bfs(std::vector<std::vector<Tile>> &doubleTileMap, std ::queue<std ::pair<i
                         // check
                         if (newx >= 0 && newx < doubleTileMap.size() && newy >= 0 && newy < doubleTileMap[0].size())
                         {
-                                if (visited[newx][newy] == 0)
+                                if (visited[newx][newy] == 0 && doubleTileMap[newy][newx].value != BLOCK)
                                 {
                                         // cout << newx << " " << newy << endl;
                                         pq.push({newx, newy});
                                         returnvisit.push({newx, newy});
-                                        // sf::Vector2i tofill{newx, newy};
-                                        // FillVisited(tofill, doubleTileMap, sf::Color::Blue);
+
                                         parent[newx][newy] = top;
                                         visited[newx][newy] = 1;
                                 }
                                 if (newx == end.first && newy == end.second)
-                                {       
+                                {
                                         cout << "In break  " << newx << " " << newy << endl;
                                         flag = true;
                                         break;
@@ -135,7 +127,7 @@ void bfs(std::vector<std::vector<Tile>> &doubleTileMap, std ::queue<std ::pair<i
                 }
         }
         // cout << counter << endl;
-        showq(returnvisit);
+        // showq(returnvisit);
 }
 
 void dijkstra(std::vector<std::vector<Tile>> &doubleTileMap, std ::queue<std ::pair<int, int>> &returnvisit,
@@ -148,10 +140,10 @@ void dijkstra(std::vector<std::vector<Tile>> &doubleTileMap, std ::queue<std ::p
                 for (int j = 0; j < doubleTileMap[0].size(); j++)
                 {
                         if (doubleTileMap[i][j].value == START_WEIGHT)
-                                start = {j,i};
+                                start = {j, i};
 
                         if (doubleTileMap[i][j].value == END_WEIGHT)
-                                end = {j,i};
+                                end = {j, i};
                 }
         }
 
@@ -188,7 +180,7 @@ void dijkstra(std::vector<std::vector<Tile>> &doubleTileMap, std ::queue<std ::p
                                         visited[newx][newy] = 1;
                                 }
                                 if (newx == end.first && newy == end.second)
-                                {       //returnvisit.push({newx, newy});
+                                { // returnvisit.push({newx, newy});
                                         flag = true;
                                         break;
                                 }
@@ -239,11 +231,12 @@ int main()
         }
 
         // std ::cout << "This is the size : " << doubleTileMap.size() << " " << doubleTileMap[0].size() << std ::endl;
-        std::cout<<"Click anywhere in the grid to give Start Position"<<std::endl;
+        std::cout << "Click anywhere in the grid to give Start Position" << std::endl;
         int counter = 2;
         std::vector<std ::vector<std::pair<int, int>>> parent(doubleTileMap.size(), std ::vector<std ::pair<int, int>>(doubleTileMap[0].size(), {0, 0}));
         std ::queue<std::pair<int, int>> returnvisit;
         bool flag = false;
+        std ::pair<int, int> current;
         while (window.isOpen())
         {
 
@@ -265,8 +258,9 @@ int main()
                                 case sf::Keyboard::Space:
                                         std::cout << "Space Pressed\n";
                                         // std ::cout << "Before calling " << returnvisit.size() << std ::endl;
-                                        if (counter == 0 && flag == false){
-                                                dijkstra(doubleTileMap, returnvisit, parent);
+                                        if (counter == 0 && flag == false)
+                                        {
+                                                bfs(doubleTileMap, returnvisit, parent);
                                                 flag = true;
                                         }
                                         // cout<<
@@ -296,10 +290,10 @@ int main()
                                 auto mousePos = sf::Mouse::getPosition(window);
                                 auto mouseWorldPos = window.mapPixelToCoords(mousePos, view);
                                 if (counter == 2)
-                                {       
+                                {
                                         // std::cout << counter << std::endl;
                                         MouseLeftButtonPressed(mousePos, mouseWorldPos, doubleTileMap, START_WEIGHT, sf::Color::Green);
-                                        std::cout<<"Click anywhere in the grid to give Goal Position"<<std::endl;
+                                        std::cout << "Click anywhere in the grid to give Goal Position" << std::endl;
                                         counter--;
                                 }
                                 else if (counter == 1)
@@ -307,23 +301,47 @@ int main()
                                         // std ::cout << counter << std ::endl;
                                         MouseLeftButtonPressed(mousePos, mouseWorldPos, doubleTileMap, END_WEIGHT, sf::Color::White);
                                         counter--;
-                                        std::cout<<"Now Press Space to start Path-Planning using BFS";
+                                        std::cout << "Now Press Space to start Path-Planning using BFS";
                                 }
                         }
                 }
-                if(flag ==true){
+                if (flag == true)
+                {
 
-                        if(returnvisit.size()!=0){
+                        if (returnvisit.size() != 0)
+                        {
                                 // showq(returnvisit);
-                                std::pair<int, int> p=returnvisit.front();          
-                                sf::Vector2i to_color{p.first,p.second};
+                                std::pair<int, int> p = returnvisit.front();
+                                sf::Vector2i to_color{p.first, p.second};
                                 returnvisit.pop();
-                                // sf::Color color(255, 165, 0,1.0);
-                                sf::Color color(255, 165, 0,255/4);
-                                FillVisited(to_color, doubleTileMap,  color);
+                                if (doubleTileMap[p.second][p.first].value == START_WEIGHT)
+                                        continue;
+                                else if (doubleTileMap[p.second][p.first].value == END_WEIGHT)
+                                {
+                                        current = p;
+                                        continue;
+                                }
 
+                                sf::Color color(255, 165, 0, 255 / 4);
+                                FillVisited(to_color, doubleTileMap, color);
                         }
-                        else{
+                        else if (doubleTileMap[current.second][current.first].value != START_WEIGHT)
+                        {
+
+                                // TODO: It should not be the END_WEIGHT
+                                if (doubleTileMap[current.second][current.first].value == END_WEIGHT)
+                                {
+                                        current = parent[current.first][current.second];
+                                        continue;
+                                }
+
+                                sf::Vector2i to_color{current.first, current.second};
+                                sf::Color color(0, 0, 255, 255 / 4);
+                                FillVisited(to_color, doubleTileMap, color);
+                                current = parent[current.first][current.second];
+                        }
+                        else
+                        {
                                 flag = false;
                                 std ::cout << "Success" << std ::endl;
                                 // break;
@@ -337,11 +355,27 @@ int main()
                         window.setTitle("Mouse Position: (" + std::to_string(int(mouseWorldPos.x / 64.f)) + ", " +
                                         std::to_string(int(mouseWorldPos.y / 64.f)) + ")");
 
+                        if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+                        {
+                                if (mouseWorldPos.x >= 0 && mouseWorldPos.y >= 0 &&
+                                    mouseWorldPos.x < WINDOW_SIZE.x && mouseWorldPos.y < WINDOW_SIZE.y && counter == 0)
+                                {
+                                        auto position = mousePos;
+                                        position.x /= TILE_SIZE.x;
+                                        position.y /= TILE_SIZE.y;
+
+                                        doubleTileMap[position.y][position.x].shape.setFillColor(sf::Color::Red);
+                                        doubleTileMap[position.y][position.x].value = BLOCK;
+                                }
+                        }
+
                         while (timeSinceLastUpdate > FrameTime)
                         {
-                                timeSinceLastUpdate -= FrameTime; 
-                                while (timeSinceLastUpdate > FrameTime) {
-                                                timeSinceLastUpdate -= FrameTime;}
+                                timeSinceLastUpdate -= FrameTime;
+                                while (timeSinceLastUpdate > FrameTime)
+                                {
+                                        timeSinceLastUpdate -= FrameTime;
+                                }
                         }
                 }
                 // view.setCenter(shape.getPosition());

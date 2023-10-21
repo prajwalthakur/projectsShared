@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/prajwal20/waterloo/sfmlPathPlanning
+CMAKE_SOURCE_DIR = /home/prajwal20/waterloo/projectsShared/sfmlPathPlanning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/prajwal20/waterloo/sfmlPathPlanning/build
+CMAKE_BINARY_DIR = /home/prajwal20/waterloo/projectsShared/sfmlPathPlanning/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/testC.dir/clean
 CMakeFiles/testC.dir/all:
 	$(MAKE) -f CMakeFiles/testC.dir/build.make CMakeFiles/testC.dir/depend
 	$(MAKE) -f CMakeFiles/testC.dir/build.make CMakeFiles/testC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/prajwal20/waterloo/sfmlPathPlanning/build/CMakeFiles --progress-num=1,2 "Built target testC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/prajwal20/waterloo/projectsShared/sfmlPathPlanning/build/CMakeFiles --progress-num=1,2 "Built target testC"
 .PHONY : CMakeFiles/testC.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/testC.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/prajwal20/waterloo/sfmlPathPlanning/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/prajwal20/waterloo/projectsShared/sfmlPathPlanning/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/testC.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/prajwal20/waterloo/sfmlPathPlanning/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/prajwal20/waterloo/projectsShared/sfmlPathPlanning/build/CMakeFiles 0
 .PHONY : CMakeFiles/testC.dir/rule
 
 # Convenience name for target.

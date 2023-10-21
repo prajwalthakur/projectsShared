@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/prajwal20/waterloo/sfmlPathPlanning/PathPlanning.cpp
+/home/prajwal20/waterloo/projectsShared/sfmlPathPlanning/PathPlanning_Obstacle.cpp
 SFML/Graphics.hpp
 -
 iostream

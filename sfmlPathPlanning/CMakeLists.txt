@@ -15,7 +15,7 @@ find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 #add_executable(testC ${SOURCES})
 
 
-file(GLOB_RECURSE APP_SRC_FILES PathPlanning.cpp)
+file(GLOB_RECURSE APP_SRC_FILES PathPlanning_Obstacle.cpp)
 add_executable (testC ${APP_SRC_FILES}) 
 # Link against the SFML libraries
 target_link_libraries(testC sfml-graphics sfml-window sfml-system) 

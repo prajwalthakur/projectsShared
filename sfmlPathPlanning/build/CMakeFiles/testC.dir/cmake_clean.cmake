@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/testC.dir/PathPlanning.cpp.o"
+  "CMakeFiles/testC.dir/PathPlanning_Obstacle.cpp.o"
   "testC"
   "testC.pdb"
 )
