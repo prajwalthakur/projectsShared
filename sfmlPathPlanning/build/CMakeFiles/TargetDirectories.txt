@@ -1,0 +1,3 @@
+/home/prajwal20/waterloo/sfmlPathPlanning/build/CMakeFiles/rebuild_cache.dir
+/home/prajwal20/waterloo/sfmlPathPlanning/build/CMakeFiles/edit_cache.dir
+/home/prajwal20/waterloo/sfmlPathPlanning/build/CMakeFiles/testC.dir

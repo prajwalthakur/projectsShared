@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/prajwal20/waterloo/sfmlPathPlanning/PathPlanning.cpp
+SFML/Graphics.hpp
+-
+iostream
+-
+queue
+-
+stack
+-
+cstdlib
+-
+
