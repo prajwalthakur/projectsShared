@@ -1,3 +1,0 @@
-# Model Predictive Contouring Control
-
-
